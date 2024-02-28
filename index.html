@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#4458dc" />
+    <title>Hafiz Saqib - Web Developer</title>
+
+    <link rel="stylesheet" href="./src/dist/main.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+    <!----------------- F I X E D   C O N T E N T  ------------->
+    <div class="cursor"></div>
+    <div class="scroll-watcher"></div>
+
+    <div class="sidebar" id="sidebar">
+        <div class="close" onclick="hideSidebar()">
+            <i class="bi bi-x-lg"></i>
+        </div>
+        <div class="sb-cont">
+            <ul class="links-list flex-col">
+                <li><a onclick="hideSidebar()" href="#">Home</a></li>
+                <li><a onclick="hideSidebar()" href="#about"> About</a></li>
+                <li><a onclick="hideSidebar()" href="#services"> Services</a></li>
+                <li><a onclick="hideSidebar()" href="#portfolio"> Portfolio</a></li>
+                <li><a onclick="hideSidebar()" href="#testimonials"> Testimonials</a></li>
+                <li><a onclick="hideSidebar()" href="#contact"> Contact</a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="overlay" onclick="hideSidebar()">
+
+    </div>
+
+
+
+    <!----------------- E N D    F I X E D   C O N T E N T  ------------->
+
+    <section id="home" class="flex-col">
+
+        <header class="flex">
+            <nav id="nav">
+                <!-- <div class="nav-left">
+                    <a href="" id="logo">hafizsaqib</a>
+                </div> -->
+                <div class="nav-right flex">
+                    <ul class="flex-row">
+                        <li><a href="#"> <span>Home</span></a></li>
+                        <li><a href="#about"> <span>About</span></a></li>
+                        <li><a href="#services"> <span>Services</span></a></li>
+                        <li><a href="#portfolio"> <span>Portfolio</span></a></li>
+                        <li><a href="#testimonials"> <span>Testimonials</span></a></li>
+                        <li><a href="#contact"> <span>Contact</span></a></li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="hamburger" onclick="showSidebar(); dropDown(this);">
+                <div id="bar1"></div>
+                <div id="bar2"></div>
+                <div id="bar3"></div>
+            </div>
+        </header>
+
+        <div class="home-cont flex" data-aos="fade-up">
+
+
+            <div class="home-cont-content flex-col">
+                <div style="width: 90%;" class="flex-col">
+                    <h2>HEY! I AM</h2>
+                    <div class="flex-row" style="gap: 20px;">
+                        <h1>Najam</h1>
+                        <h1>Us</h1>
+                        <h1>Saqib</h1>
+                    </div>
+
+
+
+                    <h4 class="type-text">I'm <span class="auto-type"></span></h4>
+                    <h3>from &nbsp; <span>Pakistan</span> </h3>
+                    <p>I’m a skilled web developer based in the Pakistan, driven by passion and <br> dedicated to
+                        delivering exceptional results. </p>
+                </div>
+                <div class="home-btns flex">
+                    <!-- <li class="abt-btn"> <a href="#about">About me</a></li> -->
+                    <!-- <li class="btn-nav"> <a href="elon.webp" download="">Download CV</a></li> -->
+                </div>
+                <div class="social-icons flex">
+                    <img src="src/icons/facebook.svg" title="Facebook">
+                    <img src="src/icons/github.svg" title="Github">
+                    <img src="src/icons/linkedin.svg" title="LinkedIn">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="about" class="flex-col">
+
+        <div id="about-container" class=" flex">
+            <div class="left-abt flex" data-aos="fade-up">
+                <div class="image-con flex">
+                    <div class="own-view flex">
+                        <img src="src/images/cod.webp" alt="" class="imag">
+                    </div>
+                    <div class="flex-row">
+                        <img class="fav-icon"
+                            src="//upload.wikimedia.org/wikipedia/commons/thumb/9/96/Sass_Logo_Color.svg/512px-Sass_Logo_Color.svg.png">
+                        <img class="fav-icon" src="src/icons/tailwind.webp">
+                        <img class="fav-icon" src="src/icons/bootstrap.svg">
+                        <img class="fav-icon" src="src/icons/react.svg">
+                        <img class="fav-icon" src="src/icons/html.webp">
+                        <img class="fav-icon" src="src/icons/css.webp">
+                        <img class="fav-icon" src="src/icons/js.webp">
+
+                    </div>
+                </div>
+            </div>
+            <div class="right-abt" data-aos="fade-up">
+                <div class="abt-cont">
+                    <h2>I'm Web Development Expert</h2>
+                    <h1>I Can Provide Any type of Service</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum aliquid ullam blanditiis,
+                        dolore accusantium sed culpa omnis molestiae! Natus veniam voluptate cupiditate quibusdam
+                        deleniti suscipit? Repudiandae consequuntur, ipsum id dicta eius consequatur omnis, aliquid
+                        mollitia quaerat enim alias repellat iste accusantium</p>
+                    <a href="#contact">Hire Me</a>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <section id="services" class="flex-col">
+        <div class="services-head flex-col" data-aos="fade-up">
+            <h2 class="h2-hd">Services</h2>
+            <h1 class="h1-hd">What I Do for Clients</h1>
+            <p class="p-hd"> Most common methods for designing websites that work well on <br>desktop is responsive and
+                adaptive
+                design</p>
+        </div>
+        <div class="services-cards" id="serviceCards">
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="sk-cont">
+            <div class="sk-left" data-aos="fade-up">
+                <div class="sk-left-head">
+                    <h2>Development is Life</h2>
+                    <h1>I Don't Always Write Code But When I Prefer JS</h1>
+                    <p>Most common methods for designing websites that work well on desktop is responsive and adaptive
+                        design</p>
+                </div>
+                <div class="skill-set">
+                    <div class="sk-bar">
+                        <span class="skill-name">HTML</span>
+                        <span class="sk-pr">%</span>
+                        <span class="sk-num">80</span>
+                        <div class="progress-bar">
+                            <div class="progress" data-percent="80%" style="width: 0; background-color: #e34c26;"></div>
+                        </div>
+                    </div>
+                    <div class="sk-bar">
+                        <span class="skill-name">CSS</span>
+                        <span class="sk-pr">%</span>
+                        <span class="sk-num">70</span>
+                        <div class="progress-bar">
+                            <div class="progress" data-percent="70%" style="width: 0; background-color: #2965f1;"></div>
+                        </div>
+                    </div>
+                    <div class="sk-bar">
+                        <span class="skill-name">JavaScript</span>
+                        <span class="sk-pr">%</span>
+                        <span class="sk-num">85</span>
+                        <div class="progress-bar">
+                            <div class="progress" data-percent="85%" style="width: 0; background-color: #f09e23;"></div>
+                        </div>
+                    </div>
+                    <div class="sk-bar">
+                        <span class="skill-name">Bootstrap</span>
+                        <span class="sk-pr">%</span>
+                        <span class="sk-num">90</span>
+                        <div class="progress-bar">
+                            <div class="progress" data-percent="90%"
+                                style="width: 0; background-color: rgb(138 62 255);"></div>
+                        </div>
+                    </div>
+                    <div class="sk-bar">
+                        <span class="skill-name">Tailwind Css</span>
+                        <span class="sk-pr">%</span>
+                        <span class="sk-num">70</span>
+                        <div class="progress-bar">
+                            <div class="progress" data-percent="70%" style="width: 0; background-color: #38bdf8;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sk-right flex" data-aos="fade-up">
+                <div class="skills-gif">
+                    <img src="src/images/screen.gif" alt="" class="imag">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="portfolio" class="flex-col">
+        <div class="port-cont-hd" data-aos="fade-up">
+            <h2 class="h2-hd">Portfolio</h2>
+            <h1 class="h1-hd">My Amazing Works</h2>
+                <p class="p-hd">Most common methods for designing websites that work well on <br> desktop is responsive
+                    and adaptive
+                    design</p>
+        </div>
+        <div class="port-cont">
+            <!-- <div class="port-list" data-aos="fade-up">
+                <ul>
+                    <li>All</li>
+                    <li>Wordpress</li>
+                    <li>Frontend</li>
+                    <li>Backend</li>
+                </ul>
+            </div> -->
+            <div class="port-cards" id="port-cards">
+            </div>
+        </div>
+    </section>
+    <section id="testimonials" class="flex-col">
+        <div class="testi-head flex-col" data-aos="fade-up">
+            <h2 class="h2-hd">Testimonials</h2>
+            <h1 class="h1-hd">What My Clients Say</h1>
+            <p class="p-hd"> Most common methods for designing websites that work well on <br> desktop is responsive and
+                adaptive
+                design</p>
+        </div>
+        <div class="testi-cards">
+            <div id="cards-con" class="cards-con flex">
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="flex-col">
+        <div class="contact-head flex-col" data-aos="fade-up">
+            <h2 class="h2-hd">Contact Me</h2>
+            <h1 class="h1-hd">I Want To Hear From You</h1>
+            <p class="p-hd"> Please fill out the form on this section to contact with me. Or call between <br> <time>9:00 a.m.
+                and 8:00 p.m.</time> , Monday through Friday</p>
+        </div>
+        <form id="form" action="index.html" data-aos="fade-up">
+            <div class="form-grid" >
+                <div class="input-div one" >
+                    <div class="div">
+                        <input type="text" accept="lang" lang="en" class="input" placeholder="First Name" required>
+                    </div>
+                </div>
+    
+                <div class="input-div pass">
+                    <div class="div">
+                        <input type="text" accept="lang" lang="en" class="input" placeholder="Last Name" required>
+                    </div>
+                </div>
+            
+    
+            <div class="input-div pass">
+                <div class="div">
+                    <input type="email" accept="email" class="input" placeholder="Email Address" required>
+                </div>
+            </div>
+    
+            <div class="input-div pass">
+                <div class="div">
+                    <input type="tel" accept="Number" class="input" placeholder="Phone Number" required>
+                </div>
+            </div>
+        </div>
+            <label for="textarea">Message:</label>
+            <textarea name="message" spellcheck="true" lang="en"  cols="100" rows="7" placeholder="Your message here . . ."></textarea>
+           <a class="con-btn" href=""><button type="submit">Send Message</button></a> 
+        </form>
+        <div class="contact-cards flex">
+            <div class="contact-con">
+                <div class="contact-card" data-aos="fade-up">
+                    <a target="_blank"
+                        href="https://www.google.com/maps/place/Okara,+Punjab/data=!4m2!3m1!1s0x3922a75d9a9639e5:0xa25a5b6b17fab12b?sa=X&ved=2ahUKEwi7s4bz056EAxVvTKQEHYAfDBMQ8gF6BAgQEAA">
+                        <div class="con-card-img flex">
+                            <img src="src/icons/geo-alt-fill.svg" alt="">
+                        </div>
+                        <div class="con-card-details flex-col">
+                            <h1>Address</h1>
+                            <a>Okara, Pakistan</a>
+                        </div>
+                    </a>
+                </div>
+                <div class="contact-card" data-aos="fade-up">
+                    <a href="mailto:saqibali24info@gmail.com ">
+                        <div class="con-card-img flex">
+                            <img src="src/icons/envelope-at-fill.svg" alt="">
+                        </div>
+                        <div class="con-card-details flex-col">
+                            <h1>Email</h1>
+                            <a>saqibali24info@gmail.com</a>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="contact-card" data-aos="fade-up">
+                    <a href="https://wa.me/+923021105464/?text=Are%2C%you%2C%available%2C%to%2C%communicate?">
+                        <!-- <a href="intent://send/03021105464#Intent;scheme=smsto;package=com.whatsapp;action=android.intent.action.SENDTO;end"> -->
+ 
+                        <div class="con-card-img flex">
+                            <img src="src/icons/telephone-fill.svg" alt="">
+                        </div>
+                        <div class="con-card-details flex-col">
+                            <h1>Phone</h1>
+                            <a>+92 3021105464</a>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="flex-col">
+        <p>Developed with ❤ by Najam us Saqib</p>
+        <div class="social-icons flex">
+            <!-- <img src="src/icons/behance.svg" title="Behance"> -->
+            <img src="src/icons/instagram.svg" title="Instagram">
+            <img src="src/icons/facebook.svg" title="Facebook">
+            <img src="src/icons/github.svg" title="Github">
+            <img src="src/icons/linkedin.svg" title="LinkedIn">
+            <img src="src/icons/twitter-x.svg" title="X">
+            <!-- <img src="src/icons/stack-overflow.svg" title="Stack overflow"> -->
+        </div>
+    </footer>
+
+
+    <!------------------------------- JavaScript ---------------------------------------->
+    <script src="src/js/data.js"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+    <script>
+        AOS.init({
+            offset: 120,
+            duration: 1000,
+        });
+    </script>
+    <script src="src/js/script.js"></script>
+
+</body>
+
+</html>
