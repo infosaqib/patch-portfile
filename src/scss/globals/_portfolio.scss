@@ -8,31 +8,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-
-  // h3 {
-  //   margin-top: 5vh;
-  //   color: #15e58b;
-  //   font-size: 1.17rem;
-  //   font-weight: 500;
-  // }
-
-  // h2 {
-  //   font-size: 1.8rem;
-  //   color: #000;
-  //   font-weight: 500;
-  //   padding: 5px 0;
-  // }
-
-  // p {
-  //   padding: 4px;
-  //   font-weight: 400;
-  //   color: #6f6b80;
-  //   margin: 0px 2px;
-  //   font-size: 1rem;
-  //   text-align: center;
-  // }
 }
-// .port-cont {}
 
 .port-list {
   margin: 6vh 1.4vw;
@@ -60,7 +36,7 @@
 .port-cards {
   gap: 65px;
   display: grid;
-  grid-template-columns: repeat(2, 300px);
+  grid-template-columns: repeat(2, 35%);
   justify-content: center;
   align-items: center;
   margin-bottom: 16vh;
@@ -173,8 +149,6 @@
 
 @media only screen and (max-width: 990px) {
   .port-cards {
-    display: grid;
-    grid-template-columns: repeat(2, 35%);
     padding: 10vh 0;
   }
 
@@ -200,6 +174,5 @@
   .port-cont-hd {
     width: 90%;
     gap: 10px;
-
   }
 }
