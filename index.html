@@ -7,20 +7,17 @@
     <meta name="theme-color" content="#4458dc" />
     <title>Hafiz Saqib - Web Developer</title>
 
-    <link rel="stylesheet" href="./src/dist/main.css">
+    <link rel="stylesheet" href="./src/dist/app.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 
 <body>
     <!----------------- F I X E D   C O N T E N T  ------------->
-    <div class="cursor"></div>
-    <div class="scroll-watcher"></div>
+    <!-- <div class="cursor"></div>
+    <div class="scroll-watcher"></div> -->
 
     <div class="sidebar" id="sidebar">
-        <div class="close" onclick="hideSidebar()">
-            <i class="bi bi-x-lg"></i>
-        </div>
         <div class="sb-cont">
             <ul class="links-list flex-col">
                 <li><a onclick="hideSidebar()" href="#">Home</a></li>
@@ -58,16 +55,18 @@
                     </ul>
                 </div>
             </nav>
-            <div class="hamburger" onclick="showSidebar(); dropDown(this);">
-                <div id="bar1"></div>
-                <div id="bar2"></div>
-                <div id="bar3"></div>
-            </div>
+            <button class="button-one" id="button-one" aria-controls="primary-navigation" aria-expanded="false" onclick="showSidebar()">
+    <svg fill="var(--button-color)" class="hamburger" viewBox="0 0 100 100" width="25">
+      <rect class="line top" width="80" height="10" x="10" y="25" rx="5">
+      </rect>
+      <rect class="line middle" width="80" height="10" x="10" y="45" rx="5">
+      </rect>
+      <rect class="line bottom" width="80" height="10" x="10" y="65" rx="5">
+      </rect>
+    </svg>
+  </button>
         </header>
-
         <div class="home-cont flex" data-aos="fade-up">
-
-
             <div class="home-cont-content flex-col">
                 <div style="width: 90%;" class="flex-col">
                     <h2>HEY! I AM</h2>
@@ -76,9 +75,6 @@
                         <h1>Us</h1>
                         <h1>Saqib</h1>
                     </div>
-
-
-
                     <h4 class="type-text">I'm <span class="auto-type"></span></h4>
                     <h3>from &nbsp; <span>Pakistan</span> </h3>
                     <p>I’m a skilled web developer based in the Pakistan, driven by passion and <br> dedicated to
@@ -211,7 +207,7 @@
                     and adaptive
                     design</p>
         </div>
-        <div class="port-cont">
+        <div class="port-cont flex-col ">
             <!-- <div class="port-list" data-aos="fade-up">
                 <ul>
                     <li>All</li>
@@ -233,7 +229,7 @@
                 design</p>
         </div>
         <div class="testi-cards">
-            <div id="cards-con" class="cards-con flex">
+            <div id="cards-con" class="cards-con">
             </div>
         </div>
     </section>
@@ -273,7 +269,7 @@
         </div>
             <label for="textarea">Message:</label>
             <textarea name="message" spellcheck="true" lang="en"  cols="100" rows="7" placeholder="Your message here . . ."></textarea>
-           <a class="con-btn" href=""><button type="submit">Send Message</button></a> 
+           <a class="con-btn" ><button type="submit">Send Message</button></a> 
         </form>
         <div class="contact-cards flex">
             <div class="contact-con">

@@ -1,4 +1,24 @@
 //------------------SideBar-------------------
+
+//svg Hamburger
+const buttons = document.querySelectorAll("button");
+
+buttons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const currentState = button.getAttribute("data-state");
+
+    if (!currentState || currentState === "closed") {
+      button.setAttribute("data-state", "opened");
+      button.setAttribute("aria-expanded", "true");
+    } else {
+      button.setAttribute("data-state", "closed");
+      button.setAttribute("aria-expanded", "false");
+    }
+  });
+});
+///
+
+
 //Hamburger
 function dropDown(x) {
   x.classList.toggle("change");
@@ -10,8 +30,8 @@ let sidebar = document.getElementById("sidebar");
 let overlay = document.getElementById("overlay");
 
 function showSidebar() {
-  sidebar.classList.add("show");
-  overlay.classList.add("showit");
+  sidebar.classList.toggle("show");
+  overlay.classList.toggle("showit");
 }
 function hideSidebar() {
   sidebar.classList.remove("show");
@@ -187,21 +207,6 @@ generateTestiCards();
 
 
 
-/*Background image
-function setRandomBackground(){
-
-const images = ['src/images/img-1.webp', 'src/images/img-2.webp', 'src/images/img-3.webp']
-
-const randomIndex = Math.floor(Math.random() * images.length)
-
-let Home = document.getElementById('home');
-
-let beforeHome = window.getComputedStyle(Home, '::before');
-
-beforeHome.backgroundImage = `url('${images[randomIndex]}')`
-}
-
-window.onload = setRandomBackground;*/
 
 
 // Form Styling
@@ -225,3 +230,5 @@ inputs.forEach(input => {
 	input.addEventListener("focus", addcl);
 	input.addEventListener("blur", remcl);
 });
+
+
