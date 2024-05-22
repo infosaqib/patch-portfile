@@ -1,0 +1,183 @@
+@use "variables" as *;
+
+#portfolio {
+  height: 100%;
+  width: 100%;
+  margin-block: 1em;
+}
+
+.port-cont-hd {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-block: 2em;
+}
+
+
+.port-list {
+  margin: 6vh 1.4vw;
+
+  ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+
+    li {
+      list-style: none;
+      padding: 1vh 2.8vw;
+      color: #000;
+      cursor: pointer;
+      font-size: 1rem;
+
+      &:hover,
+      &:active {
+        color: $web-clr;
+      }
+    }
+  }
+}
+.port-cards {
+  width: 80%;
+  gap: 65px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 16vh;
+  padding: 10vh;
+}
+
+.pcard {
+  border-radius: 2.18vw;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all ease 0.3s;
+  border: 2px solid $web-clr;
+  background: $bg-gradient-2;
+  box-shadow: $shadow;
+
+  img {
+    height: fit-content;
+    object-fit: cover;
+    margin-top: 2rem;
+    width: 85%;
+  }
+}
+.hover-label {
+  position: relative;
+  height: fit-content;
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0px;
+  transition: 0.6s all ease;
+
+  img {
+    // border: 2px solid #212529;
+    z-index: 1;
+    border-top-right-radius: 6px;
+    border-top-left-radius: 6px;
+  }
+}
+
+.hover-zoom-in {
+  transform: scale(0.8);
+  visibility: visible;
+  opacity: 1;
+}
+
+.hover-anime {
+  content: "";
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  background-color: rgba(40, 174, 96, 0.7);
+  z-index: 10;
+  transition: 500ms;
+  transition: 0.6s all ease;
+}
+
+.hover-label:hover .hover-anime {
+  visibility: visible;
+  opacity: 1;
+  border-radius: 2.18vw;
+}
+
+.hover-label:hover .hover-zoom-in {
+  visibility: visible;
+  opacity: 1;
+  transform: scale(1);
+}
+
+.caption-cont {
+  h5,
+  p {
+    padding: 3px;
+    color: #fff;
+    text-align: center;
+  }
+
+  h5 {
+    font-size: 1.25rem;
+    font-weight: 400;
+  }
+  p {
+    font-size: 1rem;
+    font-weight: 300;
+  }
+
+  .caption-cont a {
+    i::before {
+      content: "\f0c1";
+      font-size: 2.3rem;
+      color: $web-clr;
+    }
+
+    i::after {
+      font-size: 2.3rem;
+      content: "\f00e";
+      color: $web-clr;
+    }
+  }
+}
+
+@include breakpoint(large) {
+  .port-cards {
+    padding: 10vh 0;
+  }
+
+  h3,
+  h2,
+  p {
+    width: 90%;
+    text-align: center;
+  }
+
+  p > br {
+    display: none;
+  }
+}
+
+@include breakpoint(medium) {
+  .port-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+@include breakpoint(small) {
+  .port-cont-hd {
+    width: 90%;
+    gap: 10px;
+  }
+}

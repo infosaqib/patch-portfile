@@ -1,0 +1,51 @@
+@use 'variables' as *;
+  
+  .button-one {
+    position: fixed;
+    top: 1.3em;
+    right: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+      --button-color: hsl(142, 70%, 49%);
+      overflow: hidden;
+      padding: 0.4em;
+      background: transparent;
+      border: 2px solid var(--button-color, #000);
+      z-index: 99999;
+      cursor: pointer;
+      opacity: 0;
+      visibility: hidden;
+  
+      
+      @include breakpoint(medium) {
+          opacity: 1;
+          visibility: visible;
+      }
+  
+  
+   .line {
+    transition: y 300ms ease-in 300ms, rotate 300ms ease-in, opacity 0ms 300ms;
+    transform-origin: center;
+  }
+  
+ &[aria-expanded=true] .line {
+    transition: y 300ms ease-in, rotate 300ms ease-in 300ms, opacity 0ms 300ms;
+  }
+  
+  &[aria-expanded=true] :is(.top, .bottom) {
+    y: 45;
+  }
+  
+  &[aria-expanded=true] .top {
+    rotate: 45deg;
+  }
+  
+  &[aria-expanded=true] .middle {
+    opacity: 0;
+  }
+  
+  &[aria-expanded=true] .bottom {
+    rotate: -45deg;
+  }
+   }

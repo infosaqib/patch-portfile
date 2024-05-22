@@ -1,0 +1,51 @@
+//Media Queries - px, 768px, 900px, 1440px
+
+$breakpoints-up: (
+  "small": 30em,
+  "medium": 48.125em,
+  "large": 61.93em,
+  "xlarge": 90em,
+);
+
+@mixin breakpoint($size) {
+  @media (max-width: map-get($breakpoints-up, $size)) {
+    @content;
+  }
+}
+
+//Variables
+$font-size-I: 2em;
+$font-size-II: 1.4em;
+$font-size-III: 1.2em;
+
+
+
+
+@include breakpoint(large){
+  $font-size-I: 1.8em;
+$font-size-II: 1.2em;
+$font-size-III: 1.1em;
+}
+@include breakpoint(medium){
+  $font-size-I: 1em;
+  $font-size-II: 1em;
+  $font-size-III: 1em;
+}
+@include breakpoint(small){
+  $font-size-I: 1em;
+  $font-size-II: 1em;
+  $font-size-III: 1em;
+  $font-size-IV: 1em;
+}
+
+
+
+$web-clr: #854fee ;
+$bg-gradient-1: linear-gradient(to left, #854fee 0%, #4458dc 100%),
+  radial-gradient(circle at top right, #854fee, #4458dc);
+$bg-gradient-2: linear-gradient(to top, #4458dc 0%, #854fee 100%),
+  radial-gradient(circle at bottom, #4458dc, #854fee);
+$shadow: 18px 0px 87px 0px rgba(9.999999999999996, 15.000000000000034, 70, 0.07);
+$font: "Poppins", sans-serif;
+
+

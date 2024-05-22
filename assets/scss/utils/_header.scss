@@ -1,0 +1,107 @@
+@use 'variables' as *;
+
+header {
+    width: 100%;
+    // height: 10vh;
+    position: relative;
+    top: 0;
+    
+  }
+  
+  .logo {
+    color: $web-clr;
+    font-size: 1.3rem;
+    font-weight: 300;
+    letter-spacing: 1.5px;
+  }
+  
+  
+  #nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 2vw;
+    width: 100%;
+    z-index: 2;
+    background-color: #0c3a53cc;
+    opacity: 0;
+    visibility: hidden;
+
+    @media (min-width: 768px) {
+        opacity: 1;
+        visibility: visible;
+    } 
+  
+    img {
+      width: 100px;
+    }
+  }
+  .nav-right {
+    margin:  1vw;
+  
+    ul {
+      li {
+        list-style: none;
+        margin: 15px;
+        a {
+          color: #fff;
+          text-decoration: none;
+          font-size: 1.2rem;
+  
+          span {
+            position: relative;
+            padding-bottom: 4px;
+            cursor: pointer;
+          }
+          span::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background: $web-clr;
+            visibility: visible;
+            -webkit-transform: scaleX(0);
+            -moz-transform: scaleX(0);
+            -ms-transform: scaleX(0);
+            -o-transform: scaleX(0);
+            transform: scaleX(0);
+            -webkit-transition: all 0.3s ease-in-out 0s;
+            -moz-transition: all 0.3s ease-in-out 0s;
+            -ms-transition: all 0.3s ease-in-out 0s;
+            -o-transition: all 0.3s ease-in-out 0s;
+            transition: all 0.3s ease-in-out 0s;
+          }
+  
+          &:hover span::before {
+            visibility: visible;
+            -webkit-transform: scaleX(1);
+            -moz-transform: scaleX(1);
+            -ms-transform: scaleX(1);
+            -o-transform: scaleX(1);
+            transform: scaleX(1);
+          }
+        }
+      }
+    }
+  }
+  
+  .nav-left {
+    outline: 2px solid $web-clr;
+  }
+  
+
+  
+  @include breakpoint(large) {
+    .nav-right > ul > li > a {
+      font-size: 2vw;
+    }
+  }
+  
+  @include breakpoint(medium) {
+  
+    .nav-right > ul {
+      visibility: hidden;
+      opacity: 0;
+    }}

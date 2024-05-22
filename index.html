@@ -7,9 +7,11 @@
     <meta name="theme-color" content="#4458dc" />
     <title>Hafiz Saqib - Web Developer</title>
 
-    <link rel="stylesheet" href="./src/dist/app.css">
+    <link rel="stylesheet" href="./assets/css/app.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  
 </head>
 
 <body>
@@ -70,7 +72,7 @@
             <div class="home-cont-content flex-col">
                 <div style="width: 90%;" class="flex-col">
                     <h2>HEY! I AM</h2>
-                    <div class="flex-row" style="gap: 20px;">
+                    <div class="flex-row name-coll" style="gap: 20px;">
                         <h1>Najam</h1>
                         <h1>Us</h1>
                         <h1>Saqib</h1>
@@ -98,7 +100,7 @@
             <div class="left-abt flex" data-aos="fade-up">
                 <div class="image-con flex">
                     <div class="own-view flex">
-                        <img src="src/images/cod.webp" alt="" class="imag">
+                        <img src="./assets/images/cod.webp" alt="" class="imag">
                     </div>
                     <div class="flex-row">
                         <img class="fav-icon"
@@ -117,10 +119,7 @@
                 <div class="abt-cont">
                     <h2>I'm Web Development Expert</h2>
                     <h1>I Can Provide Any type of Service</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum aliquid ullam blanditiis,
-                        dolore accusantium sed culpa omnis molestiae! Natus veniam voluptate cupiditate quibusdam
-                        deleniti suscipit? Repudiandae consequuntur, ipsum id dicta eius consequatur omnis, aliquid
-                        mollitia quaerat enim alias repellat iste accusantium</p>
+                    <p>As a creative professional, I offer a range of services including whiteboard animation, digital marketing, landing page design, and portfolio web development. With a passion for storytelling and innovation, I help bring ideas to life through engaging visuals and strategic online solutions."</p>
                     <a href="#contact">Hire Me</a>
                 </div>
             </div>
@@ -174,12 +173,12 @@
                         </div>
                     </div>
                     <div class="sk-bar">
-                        <span class="skill-name">Bootstrap</span>
+                        <span class="skill-name">scss</span>
                         <span class="sk-pr">%</span>
                         <span class="sk-num">90</span>
                         <div class="progress-bar">
                             <div class="progress" data-percent="90%"
-                                style="width: 0; background-color: rgb(138 62 255);"></div>
+                                style="width: 0; background-color: rgb(226, 29, 151);"></div>
                         </div>
                     </div>
                     <div class="sk-bar">
@@ -194,7 +193,7 @@
             </div>
             <div class="sk-right flex" data-aos="fade-up">
                 <div class="skills-gif">
-                    <img src="src/images/screen.gif" alt="" class="imag">
+                    <img src="./assets/images/screen.gif" alt="" class="imag">
                 </div>
             </div>
         </div>
@@ -327,19 +326,33 @@
     </footer>
 
 
-    <!------------------------------- JavaScript ---------------------------------------->
-    <script src="src/js/data.js"></script>
+   
+   <!------------------------------- JavaScript ---------------------------------------->
+   <script src="./assets/js/data.js"></script>
+   <script src="./assets/js/script.js"></script>
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
     <script>
+//------------------TYPING animation-------------------
+var typed = new Typed(".auto-type", {
+  strings: ["Web Designer...", "Developer...", "Marketer...", "Freelancer...", 'Animator...'],
+  typeSpeed: 50,
+  backSpeed: 50,
+  loop: true,
+});
+
+
         AOS.init({
             offset: 120,
             duration: 1000,
         });
+
+
+
+        
     </script>
-    <script src="src/js/script.js"></script>
 
 </body>
 

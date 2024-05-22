@@ -1,0 +1,279 @@
+@use 'variables' as *;
+
+#contact {
+  height: 100%;
+  width: 100%;
+  margin-block: 1em;
+  
+}
+.contact-head{
+  margin-block: 2em;
+}
+ 
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 3rem;
+}
+
+#form {
+  width: calc(75% - 15px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-block: 5rem 3rem;
+}
+
+
+.input-div {
+  position: relative;
+  display: grid;
+  grid-template-columns: 7% 93%;
+  /* margin: 25px 0; */
+  padding: 5px 0;
+  border-bottom: 2px solid #d9d9d9;
+  width: 85%;
+
+  div {
+    position: relative;
+    height: 45px;
+	input {
+		width: auto;
+		height: 100%;
+		border: none;
+		outline: none;
+		background: none;
+		padding: 0.5rem 0.7rem;
+		&::placeholder {
+			text-align: left;
+			letter-spacing: 0.5px;
+		  }
+	  }
+	  
+  }
+
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    width: 0%;
+    height: 2px;
+    background-color:  $web-clr;
+    transition: 0.4s;
+  }
+
+  &:before {
+    right: 50%;
+  }
+
+  &:after {
+    left: 50%;
+  }
+
+  &.focus:before,
+  &.focus:after {
+    width: 50%;
+  }
+}
+
+  input,
+textarea,
+label {
+  font-size: 1.1rem;
+  color: #555;
+  font-family: "poppins", sans-serif;
+  caret-color: $web-clr;
+  accent-color: $web-clr;
+}
+
+ 
+textarea {
+  border: 2px solid #d9d9d9;
+  outline: none;
+  transition: all ease 0.5s;
+
+ &::placeholder {
+  font-family: monospace;
+  text-align: left;
+  padding-left: 3px;
+}
+
+ &:focus,
+ &:active {
+  border: 2px solid $web-clr;
+}
+}
+label {
+  margin-block: 3rem 0.5rem;
+  letter-spacing: 0.5px;
+}
+.con-btn{
+    display: inline;
+    
+    
+    margin: 20px auto;
+    transition: 0.3s all ease;
+    padding: 7px 20%;
+    border-radius: 100px;
+    background-color: $web-clr;
+    cursor: pointer;
+ 
+    
+    button{
+      background-color: transparent;
+      border: none;
+      outline: none;
+      text-decoration: none;
+      text-align: center;
+      cursor: pointer;
+      font-size: 1.1rem;
+      color: #fff;
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: 0.5px;}
+  }
+
+.contact-con {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  align-items: center;
+  margin: 6rem 6px;
+  gap: 30px;
+}
+
+.contact-card {
+  background-color: #fff;
+  border-radius: 12px;
+  border: 2px solid #bababa38;
+  background-color: #fff;
+  box-shadow:$shadow;
+  cursor: pointer;
+  scale: 1;
+  transition: 0.3s all ease;
+}
+.contact-card:hover {
+  scale: 1.02;
+}
+.con-card-img {
+  margin: 3px;
+
+  img {
+    width: fit-content;
+    height: 40px;
+    margin: 22px 117px 15px 117px;
+  
+  }
+}
+.con-card-details {
+  margin-bottom: 20px;
+
+  h1 {
+    font-family: "Open sans", sans-serif;
+    font-size: 1.5rem;
+    color: #000;
+    padding: 0 7px;
+    font-weight: 500;
+  }
+
+  p,
+  a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: #837575;
+    font-weight: normal;
+    padding: 10px 11px;
+  }
+}
+
+footer {
+  background-color: #111b22;
+  height: 11em;
+  width: 100%;
+
+  p {
+    font-family: "Matter", sans-serif;
+    font-size: 1.3rem;
+    color: #fff;
+    padding: 10px 0;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    font-weight: 400;
+    font-style: italic;
+  }
+}
+
+@include breakpoint(large) {  .contact-head {
+    width: 85%;
+    gap: 10px;
+
+    p > br {
+      display: none;
+    }
+  }
+ 
+
+  #form {
+    width: calc(85% - 15px);
+  }
+  .contact-con {
+    grid-template-columns: repeat(3, 220px);
+    margin: 1rem 6px;
+  }
+
+  .contact-cards {
+    margin: 10vh;
+  }
+  .con-card-img img {
+    height: 30px;
+    
+  }
+  .con-card-details {
+    h1 {
+      font-size: 1.3rem;
+    }
+
+    p,
+    a {
+      font-size: 0.8rem;
+    }
+  }
+}
+
+@include breakpoint(medium) {  .form-grid {
+    grid-template-columns: repeat(1, auto);
+  }
+
+  #form {
+    width: calc(75% - 20px);
+  }
+  input,
+  input::placeholder,
+  textarea,
+  textarea::placeholder,
+  label {
+    font-size: 0.8rem;
+  }
+  .contact-con {
+    grid-template-columns: repeat(1, 90%);
+  }
+}
+@include breakpoint(small) {  .con-card-details {
+    h1, p {
+      font-size: 1rem;
+    }
+.input-div{
+  width: 80%;
+}
+     
+  }
+  footer p, .con-btn {
+    font-size: 1rem;
+  }
+}
+@media only screen and (max-width: 500px) {
+  #form {
+    width: calc(80% - 20px);
+  }
+}

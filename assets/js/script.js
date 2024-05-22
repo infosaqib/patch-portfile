@@ -110,19 +110,13 @@ document.addEventListener("DOMContentLoaded", function () {
   handleScroll();
 });
 
-//------------------TYPING animation-------------------
-var typed = new Typed(".auto-type", {
-  strings: ["Web Designer...", "Developer...", "Marketer...", "Freelancer...", 'Animator...'],
-  typeSpeed: 50,
-  backSpeed: 50,
-  loop: true,
-});
+
 
 //------------------Mouse Follower -----------------------
-let cursor = document.querySelector(".cursor");
-document.addEventListener("mousemove", function (e) {
-  cursor.style.cssText = "left: " + e.clientX + "px; top: " + e.clientY + "px;";
-});
+// let cursor = document.querySelector(".cursor");
+// document.addEventListener("mousemove", function (e) {
+//   cursor.style.cssText = "left: " + e.clientX + "px; top: " + e.clientY + "px;";
+// });
 
 //-------------------Service Cards-----------------------------
 let serCards = document.getElementById("serviceCards");
@@ -230,5 +224,7 @@ inputs.forEach(input => {
 	input.addEventListener("focus", addcl);
 	input.addEventListener("blur", remcl);
 });
+
+
 
 
